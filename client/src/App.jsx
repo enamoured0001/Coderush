@@ -1,11 +1,11 @@
 import { useState } from 'react'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css'
-import HomePage from './Homepage'
-import Login from './Login'
-import About from './About'
-import Signup from './Signup';
 import TestimonialSection from './Testimonial';
+import CodeEditor from './CodeEditor';
+import Challenges from './Challenges';
+import Leaderboard from './Leaderboard';
+import RewardsPage from './Rewards';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -13,10 +13,10 @@ function App() {
   return (
     <BrowserRouter>
     <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/login" element={<Login />} />
-      <Route path="/Signup" element={<Signup />} />
+      <Route path="/" element={<CodeEditor />} />
+      <Route path="/challenges" element={<Challenges />} />
+      <Route path="/leaderboard" element={<Leaderboard />} />
+      <Route path="/Rewards" element={<RewardsPage />} />
       <Route path="/Testimonial" element={<TestimonialSection />} />
     
     </Routes>
