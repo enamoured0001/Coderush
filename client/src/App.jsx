@@ -1,11 +1,15 @@
 import { useState } from 'react'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css'
-import TestimonialSection from './Testimonial';
-import CodeEditor from './CodeEditor';
-import Challenges from './Challenges';
-import Leaderboard from './Leaderboard';
-import RewardsPage from './Rewards';
+import Challenges from './user/ChallengesContent';
+import CodingDashboard from './user/Dashboard';
+import Login from './user/Login';
+import LeaderboardPage from './user/Leader';
+import UserDashboard from './user/Userdashboard';
+import AdminDashboard from './user/AdminDashboard';
+import RewardPage from './user/Rewardcentre';
+
+
 
 function App() {
   const [count, setCount] = useState(0)
@@ -13,11 +17,16 @@ function App() {
   return (
     <BrowserRouter>
     <Routes>
-      <Route path="/" element={<CodeEditor />} />
+      <Route path="/" element={<CodingDashboard />} />
       <Route path="/challenges" element={<Challenges />} />
-      <Route path="/leaderboard" element={<Leaderboard />} />
-      <Route path="/Rewards" element={<RewardsPage />} />
-      <Route path="/Testimonial" element={<TestimonialSection />} />
+      <Route path="/leaderboard" element={<LeaderboardPage />} />
+      <Route path="/Rewards" element={<RewardPage />} />
+      <Route path="/profile" element={<Login />} />
+      <Route path="/userdashboard" element={<UserDashboard />} />
+      <Route path="/admindashboard" element={<AdminDashboard />} />
+     
+      
+  
     
     </Routes>
   </BrowserRouter>
